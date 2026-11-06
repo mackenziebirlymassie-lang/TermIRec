@@ -714,3 +714,73 @@ body {
   border-top: 1px solid var(--border-color);
   background-color: var(--bg-secondary);
 }
+
+/* Drag and Drop Overlay */
+.drop-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 17, 23, 0.88);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  pointer-events: none;
+  animation: modal-fade-in 0.15s ease-out;
+}
+
+.drop-overlay-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem;
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius-lg);
+  background-color: rgba(88, 166, 255, 0.05);
+  box-shadow: 0 0 40px rgba(88, 166, 255, 0.2);
+  gap: 1rem;
+  text-align: center;
+}
+
+.drop-overlay-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.drop-overlay-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* App Error Banner */
+.app-error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(248, 81, 73, 0.15);
+  border: 1px solid var(--danger);
+  color: var(--text-primary);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 860px;
+  font-size: 0.875rem;
+}
+
+.app-error-close {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
